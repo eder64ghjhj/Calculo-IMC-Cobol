@@ -1,0 +1,26 @@
+IDENTIFICATION DIVISION.
+       PROGRAM-ID. IMC-GTI.
+       AUTHOR. EDER DANIEL.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  ALTURA      PIC 9V99.
+       01  PESO        PIC 999.
+       01  IMC-RESULT  PIC ZZ9.99.
+       01  WS-PAUSA    PIC X.
+
+       PROCEDURE DIVISION.
+           DISPLAY " CALCULADORA DE IMC ".
+           DISPLAY "DIGITE A ALTURA (EX: 1.75): ".
+           ACCEPT ALTURA.
+           DISPLAY "DIGITE O PESO (EX: 080): ".
+           ACCEPT PESO.
+
+           COMPUTE IMC-RESULT = PESO / (ALTURA * ALTURA).
+
+           DISPLAY "".
+           DISPLAY "SEU IMC EH: " IMC-RESULT.
+           DISPLAY "".
+           DISPLAY "DIGITE QUALQUER COISA PARA SAIR".
+           ACCEPT WS-PAUSA.
+           STOP RUN.
